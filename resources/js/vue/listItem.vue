@@ -1,6 +1,6 @@
 <template>
     <div>
-        Hello World!
+        List View
     </div>
 </template>
 
