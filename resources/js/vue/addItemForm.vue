@@ -1,12 +1,22 @@
 <template>
     <div class="addItem">
-        <input type="text" />
-        <font-awesome-icon icon="plus-square" />
+        <input type="text" v-model="item.name" />
+        <font-awesome-icon 
+            icon="plus-square"
+            :class="[item.name ? 'active' : 'inactive', 'plus']" />
     </div>
 </template>
 
 <script>
-export default {}
+export default {
+    data: function () {
+        return {
+            item: {
+                name: ""
+            }
+        }
+    }
+}
 </script>
 
 <style scoped>
@@ -24,4 +34,9 @@ input {
     margin-right: 10px;
     width: 100%;
 }
+
+.plus { font-size: 20px; }
+
+.active { color: #00CE25; }
+.inactive { color: #999; }
 </style>
